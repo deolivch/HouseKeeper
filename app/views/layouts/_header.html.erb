@@ -4,19 +4,19 @@
         <ul>
           <% if logged_in? %>
             <div class="links">
-              <%= link_to "Home"%> | <%= link_to "Editar Perfil"%> | <%= link_to "Sair", sign_out_path, method: "delete" %>
+              <%= link_to "Home", controller: "users", action: "show", id: @user.id %> | <%= link_to "Editar Perfil", controller: "users", action: "edit", id: @user%> | <%= link_to "Sair", sign_out_path, method: "delete" %>
             </div>
 
             <li><%= link_to "Users", users_path %></li>
             <li>
               <ul>
                 <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", '#' %></li-->
+                <li><%= link_to "Settings", '#' %></li>
                 <li>
                   <%= link_to "Log out", sign_out_path, method: "delete" %>
                 </li>
               </ul>
-            </li-->
+            </li>
           <% else %>
             <li><h1><%= link_to "Log in" , root_path %></h1></li>
           <% end %>

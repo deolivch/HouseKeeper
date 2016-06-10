@@ -2,12 +2,16 @@
 	< %= link_to "Home"%> | < %= link_to "Editar Perfil"%> | < %= link_to "Sair", sign_out_path, method: "delete" % >
 </div-->
 
-<div class= "imagem">
-	<%= image_tag "criador_rails.jpg" %>
+<div class="imagem">
+	<%= image_tag @user.image, width: "230px", height: "210px" %>
 </div>
 
 <div class="perfil">
- <%= " fhdusfhsdudfhdsfh hfudhfudifsdhui hfudhfdsuif hfudhfdhf fudhfudhfudhfsdu "%>
+ <p><%= @user.name%></p>
+ <p><%= @user.email%></p>
+ <p><%= @user.telefone%></p>
+ <p><%= @user.sexo%></p>
+ <p><%= @user.tipoCadastro%></p>
 </div>
 
 <div class="endereco">
